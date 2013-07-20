@@ -22,6 +22,22 @@
         (:name dmacro
                :type http
                :url "http://www.pitecan.com/DynamicMacro/dmacro.el")
+
+	;; XXX: https://github.com/dimitri/el-get/issues/1247 がまだマージされてない CVSでのcheckoutに失敗した githubにforkしてインストール mvをcpにした
+	(:name ddskk-head
+	       :website "http://openlab.ring.gr.jp/skk/ddskk.html"
+	       :description "A Japanese input method on Emacs."
+	       :type github
+	       :pkgname "hitode909/ddskk"
+	       :autoloads nil
+	       :info "doc/skk.info"
+	       :features ("skk-setup")
+	       ;; The "correct" way would be actually installing ddskk into some subdirectory.
+	       ;; But it needs significant work due to the limitation of the Makefile
+	       ;; thus here we are trying to emulate the Makefile behaviour.
+	       :build `((,el-get-emacs "-batch" "-q" "-no-site-file" "-l" "SKK-MK" "-f" "SKK-MK-compile")
+			(,el-get-emacs "-batch" "-q" "-no-site-file" "-l" "SKK-MK" "-f" "SKK-MK-compile-info")
+			("cp" "skk-setup.el.in" "skk-setup.el")))
         ))
 
 ;; Packages to install from el-get
@@ -31,6 +47,7 @@
     dmacro
     smartchr
     inertial-scroll
+    ddskk-head
     )
   "A list of packages to install from el-get at launch.")
 

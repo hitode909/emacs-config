@@ -1,0 +1,5 @@
+(when (require 'magit nil t)
+  (global-unset-key "\C-xvd")
+  (global-set-key [(super s)] 'magit-status)
+  (global-set-key [(super l)] 'magit-log)
+  )

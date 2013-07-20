@@ -13,6 +13,10 @@
     helm
     auto-save-buffers-enhanced
     magit
+    color-theme
+    color-theme-solarized
+    perlbrew
+    flymake
     ))
 
  ;; (package-refresh-contents)

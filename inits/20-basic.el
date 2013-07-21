@@ -30,6 +30,9 @@
 ;; ソースコードに色を付ける
 (global-font-lock-mode t)
 
+(setq-default indent-tabs-mode nil)
+
+
 ;; 起動時のメッセージを表示しない
 (setq inhibit-startup-message t)
 

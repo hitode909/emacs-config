@@ -17,9 +17,13 @@
     color-theme-solarized
     perlbrew
     flymake
+    zencoding-mode
+    yasnippet
+    elscreen
+    jaunte
     ))
 
- ;; (package-refresh-contents)
+;; (package-refresh-contents)
 
 ;; Install Melpa packages
 (dolist (package my/packages)

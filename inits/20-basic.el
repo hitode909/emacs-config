@@ -359,5 +359,5 @@
 ;; (set-face-underline  'highlight-unique-symbol:face nil)
 ;; (set-face-background 'highlight-unique-symbol:face "#e7e4ff")
 
-(require 'cl)
-(defalias 'cl-flet 'flet)
+;; (require 'cl)
+;; (defalias 'cl-flet 'flet)

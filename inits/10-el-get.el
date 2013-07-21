@@ -41,14 +41,13 @@
         ))
 
 ;; Packages to install from el-get
-(defvar my/el-get-packages
+(setq my/el-get-packages
   '(
     open-github-from-here
     dmacro
     smartchr
     inertial-scroll
     ddskk-head
-    )
-  "A list of packages to install from el-get at launch.")
+    ))
 
 (el-get 'sync my/el-get-packages)

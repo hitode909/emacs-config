@@ -21,6 +21,8 @@
     yasnippet
     elscreen
     jaunte
+    rainbow-mode
+    less-css-mode
     ))
 
 ;; (package-refresh-contents)

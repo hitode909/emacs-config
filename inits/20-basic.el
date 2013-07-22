@@ -216,23 +216,6 @@
 (global-set-key *dmacro-key* 'dmacro-exec)
 (autoload 'dmacro-exec "dmacro" nil t)
 
-;;; undo-tree.el の導入 - とりあえず暇だったし何となく始めたブログ
-;;; http://d.hatena.ne.jp/khiker/20100123/undo_tree
-(global-undo-tree-mode)
-
-
-;; (define-key global-map [(super g)] 'global-outputz-mode)
-
-;; jaunte
-(require 'jaunte)
-(global-set-key [(super j)] 'jaunte)
-(set-face-foreground 'jaunte-hint-face "#fdf6e3")
-(set-face-background 'jaunte-hint-face "#d33682")
-
-;; zlc
-(require 'zlc)
-
-(global-set-key [(super m)] 'toggle-frame-fullscreen)
 
 (setq initial-scratch-message nil)
 
@@ -270,10 +253,6 @@
 ;; dropで開く
 (define-key global-map [ns-drag-file] 'ns-find-file)
 
-
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-(setq popwin:popup-window-height 0.5)
 
 
 ;; compile scroll

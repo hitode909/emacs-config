@@ -8,9 +8,7 @@
         (expand-file-name "~/.emacs.d/elisp/")
         (expand-file-name "~/.emacs.d/elisp/el-get/el-get/")
 
-        (expand-file-name "~/.emacs.d/elisp/mode/")
-        (expand-file-name "~/.emacs.d/elisp/mode/jshint-mode/")
-        (expand-file-name "~/Dropbox/config-file/.emacs.d/elisp/"))
+        (expand-file-name "~/Dropbox/private-emacs-config/elisp/"))
        load-path))
 
 
@@ -36,5 +34,6 @@
 ;;設定ファイルはinits以下に置いていて、init-loaderによって読み込まれる
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+(init-loader-load "~/Dropbox/private-emacs-config/inits")
 
 

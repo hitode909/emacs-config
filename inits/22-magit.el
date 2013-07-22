@@ -13,3 +13,7 @@
 
 (set-face-foreground 'magit-header "#586e75")
 (set-face-background 'magit-header "#fdf6e3")
+
+(add-hook 'magit-mode-hook
+          '(lambda ()
+             (local-unset-key (kbd "M-p"))))

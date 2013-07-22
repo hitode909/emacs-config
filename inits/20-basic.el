@@ -306,14 +306,6 @@
 (global-set-key (kbd "C-M-2") 'er/contract-region)
 (global-set-key (kbd "C-@") 'er/contract-region)
 
-(defun my-server-detach-buffer ()
-  (interactive)
-  (server-buffer-done (current-buffer) t)
-  (message "Detached")
-  )
-(global-set-key [(super z)] 'my-server-detach-buffer)
-
-
 ;; 直前の単語を削除
 (defun kill-region-or-backward-kill-word ()
   (interactive)

@@ -14,6 +14,12 @@
                :description "open github from here"
                :pkgname "shibayu36/emacs-open-github-from-here"
                :branch "development")
+        (:name highlight-unique-symbol
+               :type github
+               :description "typo finder"
+               :pkgname "hitode909/emacs-highlight-unique-symbol"
+               :branch "master"
+               )
         (:name inertial-scroll
                :type github
                :description "inertial-scroll"
@@ -48,6 +54,7 @@
     smartchr
     inertial-scroll
     ddskk-head
+    highlight-unique-symbol
     ))
 
 (el-get 'sync my/el-get-packages)

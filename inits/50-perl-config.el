@@ -23,11 +23,6 @@
 
              (local-set-key (kbd "C-c C-c C-u") 'popup-editor-perl-use)
 
-             (require 'auto-complete)
-             (require 'perl-completion)
-             (add-to-list 'ac-sources 'ac-source-perl-completion)
-             (perl-completion-mode t)
-
              (font-lock-add-keywords
               'cperl-mode
               '(("!" . font-lock-warning-face)))

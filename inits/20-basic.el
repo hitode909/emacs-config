@@ -1,9 +1,8 @@
-;; h
-;; ;; default encodingをutf-8に変更
-;; (set-default-coding-systems 'utf-8)
+;; default encodingをutf-8に変更
+(set-default-coding-systems 'utf-8)
 
 ;; ;; 日本語
-;; (setq current-language-environment "Japanese")
+(setq current-language-environment "Japanese")
 
 (when nil
   ;; color-theme

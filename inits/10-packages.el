@@ -23,6 +23,8 @@
     jaunte
     rainbow-mode
     less-css-mode
+    color-moccur
+    helm-c-moccur
     ))
 
 ;; (package-refresh-contents)

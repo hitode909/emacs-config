@@ -42,7 +42,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(helm-buffer-max-length nil)
+ '(coffee-tab-width 2)
+ '(helm-buffer-max-length 50)
+ '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
+ '(yas-prompt-functions (quote (my-yas/prompt)))
  '(yas/prompt-functions (quote (my-yas/prompt))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

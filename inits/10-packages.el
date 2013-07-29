@@ -25,6 +25,7 @@
     less-css-mode
     color-moccur
     helm-c-moccur
+    coffee-mode
     ))
 
 ;; (package-refresh-contents)

@@ -26,6 +26,7 @@
     color-moccur
     helm-c-moccur
     coffee-mode
+    plenv
     ))
 
 ;; (package-refresh-contents)

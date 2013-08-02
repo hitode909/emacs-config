@@ -71,3 +71,8 @@
    ("XXX" 0 'font-lock-warning-face)
    ("Hatean" 0 'font-lock-warning-face)
    ))
+
+;; plenv
+
+(require 'plenv)
+(plenv-global "5.14.2")

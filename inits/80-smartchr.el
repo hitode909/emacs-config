@@ -25,7 +25,7 @@
              (define-key ruby-mode-map (kbd ">") (smartchr '(">" " => " ">>" " > " " >= " " => '`!!''" " => \"`!!'\"")))
              ))
 
-(add-hook 'espresso-mode-hook
+(add-hook 'js-mode-hook
           '(lambda ()
              (define-key espresso-mode-map (kbd "F") (smartchr '("F" "function() { `!!' }")))
              (define-key espresso-mode-map (kbd "L") (smartchr '("L" "console.log( `!!' )")))

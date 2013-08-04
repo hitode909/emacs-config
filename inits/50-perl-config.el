@@ -62,6 +62,12 @@
               'cperl-mode
               '(("!" . font-lock-warning-face)))
 
+             ;; なんか動かない
+             ;; (setq plcmp-use-keymap nil)
+             ;; (require 'perl-completion)
+             ;; (perl-completion-mode t)
+             ;; (add-to-list 'ac-sources 'ac-source-perl-completion)
+
              ))
 
 (font-lock-add-keywords

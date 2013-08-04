@@ -27,6 +27,7 @@
     helm-c-moccur
     coffee-mode
     plenv
+    exec-path-from-shell
     ))
 
 ;; (package-refresh-contents)

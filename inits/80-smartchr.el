@@ -6,7 +6,7 @@
           '(lambda ()
              (define-key cperl-mode-map (kbd ">") (smartchr '(">" " => " ">>" " > " " >= " " => '`!!''" " => \"`!!'\"")))
              (define-key cperl-mode-map (kbd "F") (smartchr '("F" "$" "$_" "$_->" "@$")))
-             (define-key cperl-mode-map (kbd "M") (smartchr '("M" "my $`!!' = ")))
+             ;; (define-key cperl-mode-map (kbd "M") (smartchr '("M" "my $`!!' = ")))
              (define-key cperl-mode-map (kbd "D") (smartchr '("D" "use Data::Dumper; warn Dumper `!!';")))
              (define-key cperl-mode-map (kbd "S") (smartchr '("S" "my ($self) = @_;" "my ($self, $`!!') = @_;")))
              (define-key cperl-mode-map (kbd "C") (smartchr '("C" "my ($class) = @_;" "my ($class, $`!!') = @_;")))
@@ -16,8 +16,7 @@
              (define-key cperl-mode-map (kbd "{") (smartchr '("{" "sub { `!!' ")))
              (define-key cperl-mode-map (kbd "H") (smartchr '("H" "Hatena")))
              (define-key cperl-mode-map (kbd ":") (smartchr '("::" ": ")))
-             (define-key cperl-mode-map (kbd "E") (smartchr '("E" "Hatena::Epic::")))
-             ))
+            ))
 
 (add-hook 'ruby-mode-hook
           '(lambda ()

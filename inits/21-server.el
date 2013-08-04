@@ -15,6 +15,6 @@
   (server-buffer-done (current-buffer) t)
   (message "Detached")
   )
-(global-set-key [(super z)] 'my-server-detach-buffer)
+(global-set-key (kbd "M-z") 'my-server-detach-buffer)
 
 

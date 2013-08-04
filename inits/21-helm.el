@@ -13,3 +13,7 @@
 
 (global-set-key (kbd "M-i") 'helm-imenu)
 
+(global-set-key [(super z)] 'helm-resume)
+
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)

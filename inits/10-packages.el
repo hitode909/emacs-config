@@ -28,6 +28,8 @@
     coffee-mode
     plenv
     exec-path-from-shell
+    perl-completion
+    anything
     ))
 
 ;; (package-refresh-contents)

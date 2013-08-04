@@ -6,6 +6,13 @@
 ;; 全てのファイルで flymakeを有効化
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
+;; face
+(set-face-background 'flymake-errline nil)
+(set-face-foreground 'flymake-errline nil)
+(set-face-inverse-video 'flymake-errline nil)
+(set-face-underline 'flymake-errline "red")
+(set-face-bold 'flymake-errline t)
+
 ;; flymake のエラーメッセージを popup-tip で表示 - とりあえず暇だったし何となく始めたブログ
 
 ;; http://d.hatena.ne.jp/khiker/20100203/popup_flymake

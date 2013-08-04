@@ -76,3 +76,17 @@
 
 (require 'plenv)
 (plenv-global "5.14.2")
+
+;; flymake
+
+(defun flymake-perl-init ()
+  (let* ((perl (guess-plenv-perl-path))
+         (root (vc-git-root default-directory)))
+    (list perl (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5 lib t/lib), glob(qw(modules/*/lib))]" "-wc"  buffer-file-name) root)
+    ))
+
+(push '(".+\\.p[ml]$" flymake-perl-init) flymake-allowed-file-name-masks)
+(push '(".+\\.psgi$" flymake-perl-init) flymake-allowed-file-name-masks)
+(push '(".+\\.t$" flymake-perl-init) flymake-allowed-file-name-masks)
+
+(add-hook 'cperl-mode-hook (lambda () (flymake-mode t)))

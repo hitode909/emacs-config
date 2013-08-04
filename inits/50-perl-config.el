@@ -80,9 +80,8 @@
 ;; flymake
 
 (defun flymake-perl-init ()
-  (let* ((perl (guess-plenv-perl-path))
-         (root (expand-file-name (vc-git-root default-directory))))
-    (list shell-file-name (list "-c" (format "perl '-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]' -wc %s" (shell-quote-argument buffer-file-name))) root)
+  (let* ((root (expand-file-name (vc-git-root default-directory))))
+    (list "perl" (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]" "-wc"  buffer-file-name) root)
     ))
 
 (push '(".+\\.p[ml]$" flymake-perl-init) flymake-allowed-file-name-masks)

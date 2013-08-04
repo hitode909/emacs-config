@@ -5,37 +5,40 @@
 (require 'helm-config)
 (require 'helm-files)
 
-;; List files in git repos
-(defun helm-c-sources-git-project-for (pwd)
-  (loop for elt in
+;; https://github.com/syohex/dot_files/blob/master/emacs/init_loader/02_helm.el
+(defun helm-myutils:git-project-source (pwd)
+  (loop for (description . option) in
         '(("Modified files" . "--modified")
           ("Untracked files" . "--others --exclude-standard")
-          ("All controlled files in this project" . nil))
-        for title  = (format "%s (%s)" (car elt) pwd)
-        for option = (cdr elt)
-        for cmd    = (format "git ls-files %s" (or option ""))
+          ("All controlled files in this project" . ""))
+        for cmd = (format "git ls-files %s" option)
         collect
-        `((name . ,title)
+        `((name . ,(format "%s [%s]" description pwd))
           (init . (lambda ()
-                    (unless (and (not ,option) (helm-candidate-buffer))
-                      (with-current-buffer (helm-candidate-buffer 'global)
-                        (call-process-shell-command ,cmd nil t nil)))))
+                    (with-current-buffer (helm-candidate-buffer 'global)
+                      (call-process-shell-command ,cmd nil t))))
           (candidates-in-buffer)
-          (type . file))))
+          (action . (("Open File" . find-file)
+                     ("Open File other window" . find-file-other-window)
+                     ("Insert buffer" . insert-file))))))
 
-(defun helm-git-project-topdir ()
+(defun helm-myutils:git-topdir ()
   (file-name-as-directory
    (replace-regexp-in-string
     "\n" ""
     (shell-command-to-string "git rev-parse --show-toplevel"))))
 
-(defun helm-git-project ()
+;;;###autoload
+(defun helm-myutils:git-project ()
   (interactive)
-  (let ((topdir (helm-git-project-topdir)))
+  (let ((topdir (helm-myutils:git-topdir)))
     (unless (file-directory-p topdir)
       (error "I'm not in Git Repository!!"))
-    (let* ((default-directory topdir)
-           (sources (helm-c-sources-git-project-for default-directory)))
-      (helm-other-buffer sources
-                         (format "*helm git project in %s*" default-directory)))))
-(define-key global-map (kbd "M-p") 'helm-git-project)
+    (let ((default-directory topdir)
+          (sources (helm-myutils:git-project-source
+                    (file-name-nondirectory
+                     (directory-file-name topdir)))))
+      (helm-other-buffer sources "*helm git project*"))))
+
+(define-key global-map (kbd "M-p") 'helm-myutils:git-project)
+

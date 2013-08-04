@@ -16,3 +16,5 @@
 (set-face-foreground 'ac-candidate-face "#586e75")
 (set-face-background 'ac-selection-face "#586e75")
 (set-face-foreground 'ac-selection-face "#fdf6e3")
+
+(global-set-key (kbd "C-z C-z") 'helm-elscreen)

@@ -80,7 +80,7 @@
 ;; flymake
 
 (defun flymake-perl-init ()
-  (let* ((root (expand-file-name (vc-git-root default-directory))))
+  (let* ((root (expand-file-name (or (vc-git-root default-directory) default-directory))))
     (list "perl" (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]" "-wc"  buffer-file-name) root)
     ))
 

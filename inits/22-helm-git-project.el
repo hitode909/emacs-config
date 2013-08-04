@@ -31,8 +31,8 @@
 ;;;###autoload
 (defun helm-myutils:git-project ()
   (interactive)
-  (let ((topdir (helm-myutils:git-topdir)))
-    (unless (file-directory-p topdir)
+  (let ((topdir (vc-git-root default-directory)))
+    (unless topdir
       (error "I'm not in Git Repository!!"))
     (let ((default-directory topdir)
           (sources (helm-myutils:git-project-source

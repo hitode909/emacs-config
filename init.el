@@ -45,6 +45,7 @@
  '(coffee-tab-width 2)
  '(helm-buffer-max-length 50)
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
+ '(magit-set-upstream-on-push (quote dontask))
  '(yas-prompt-functions (quote (my-yas/prompt)))
  '(yas/prompt-functions (quote (my-yas/prompt))))
 (custom-set-faces

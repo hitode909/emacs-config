@@ -1,15 +1,18 @@
+(require 'deferred)
+
 (defun git-blame-current-line ()
   (interactive)
-  (let ((old-buf (current-buffer))
-	(blame-buf (get-buffer-create "*blame*"))
-	(line-num (number-to-string (line-number-at-pos))))
-    (set-buffer blame-buf)
-    (erase-buffer)
-    (call-process "~/bin/git-blame-oneline" nil "*blame*" t (buffer-file-name old-buf) line-num)
-    (setq content (buffer-string))
-    (set-buffer old-buf)
-    (when (not (eq (length content) 0))
-      (popup-tip content)
+  (lexical-let*
+      (
+       (buffer-name (buffer-file-name (current-buffer)))
+       (line-num (line-number-at-pos))
+       )
+    (deferred:$
+      (deferred:process-shell (format "git-blame-oneline %s %d" buffer-name line-num))
+      (deferred:nextc it
+        (lambda (res)
+          (popup-tip res)))
       )
     ))
+
 (global-set-key [(super b)] 'git-blame-current-line)

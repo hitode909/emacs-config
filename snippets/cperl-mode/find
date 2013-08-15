@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: find(table, where, class)
+# key: find
+# --
+find(
+    table => '$1',
+    where => {
+        $2,
+    },
+    class => '$3',
+);

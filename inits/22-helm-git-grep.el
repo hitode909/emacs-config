@@ -33,7 +33,7 @@
                      "Search for: "
                      default-word
                      'git-grep-history))
-         (command (format "cd %s && git --no-pager grep --no-color -I -n -i -e %s"
+         (command (format "cd %s && git --no-pager grep --full-name --no-color -I -n -i -e %s"
                   grep-dir
                   (shell-quote-argument grep-word))))
     (with-current-buffer (helm-candidate-buffer 'global)

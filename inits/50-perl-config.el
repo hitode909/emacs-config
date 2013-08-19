@@ -60,7 +60,12 @@
 
              (font-lock-add-keywords
               'cperl-mode
-              '(("!" . font-lock-warning-face)))
+              '(
+                ("!" . font-lock-warning-face)
+                ("TODO" 0 'font-lock-warning-face)
+                ("XXX" 0 'font-lock-warning-face)
+                ("Hatean" 0 'font-lock-warning-face)
+                ))
 
              ;; なんか動かない
              ;; (setq plcmp-use-keymap nil)
@@ -69,14 +74,6 @@
              ;; (add-to-list 'ac-sources 'ac-source-perl-completion)
 
              ))
-
-(font-lock-add-keywords
- 'cperl-mode
- '(
-   ("TODO" 0 'font-lock-warning-face)
-   ("XXX" 0 'font-lock-warning-face)
-   ("Hatean" 0 'font-lock-warning-face)
-   ))
 
 ;; plenv
 

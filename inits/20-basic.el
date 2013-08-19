@@ -334,3 +334,5 @@
 
 ;; (require 'cl)
 ;; (defalias 'cl-flet 'flet)
+
+(modify-syntax-entry ?_ "w" (standard-syntax-table))

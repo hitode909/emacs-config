@@ -43,6 +43,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(helm-boring-file-regexp-list
+   (quote
+    ("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "~$" "blib")))
  '(helm-buffer-max-length 50)
  '(helm-ff-transformer-show-only-basename nil)
  '(magit-default-tracking-name-function (quote magit-default-tracking-name-branch-only))
@@ -54,7 +57,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(header-line ((t (:background "#e9e2cb" :foreground "#52676f" :underline t :slant normal :weight bold)))))
 
 
 

@@ -30,6 +30,7 @@
     exec-path-from-shell
     perl-completion
     anything
+    auto-highlight-symbol
     ))
 
 ;; (package-refresh-contents)

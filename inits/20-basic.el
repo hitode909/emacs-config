@@ -336,3 +336,7 @@
 ;; (defalias 'cl-flet 'flet)
 
 (modify-syntax-entry ?_ "w" (standard-syntax-table))
+
+
+(require 'auto-highlight-symbol)
+(global-auto-highlight-symbol-mode t)

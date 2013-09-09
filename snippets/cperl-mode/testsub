@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sub : Tests
+# key: testsub
+# --
+sub $1 : Tests {
+    my ($self) = @_;
+    $2
+}

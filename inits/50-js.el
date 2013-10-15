@@ -13,3 +13,27 @@
                                                                        ,glyph)))))))))))
 
 (set-pretty-patterns '((?寿 ("\\<function\\>" js))))
+
+(add-hook 'js-mode-hook
+          '(lambda ()
+
+             (font-lock-add-keywords
+              'js-mode
+              '(
+                (":" . font-lock-warning-face)
+                ("Hatean" 0 'font-lock-warning-face)
+                ("hatean" 0 'font-lock-warning-face)
+                ))
+             ))
+
+(defun js2 ()
+  (interactive)
+  (setq js-indent-level 2)
+  (message "Now indent levels is 2")
+  )
+
+(defun js4 ()
+  (interactive)
+  (setq js-indent-level 4)
+  (message "Now indent levels is 4")
+  )

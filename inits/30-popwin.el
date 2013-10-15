@@ -7,3 +7,4 @@
 (push '("*Backtrace*" :noselect t :height 0.5) popwin:special-display-config)
 (push '("*undo-tree*" :height 0.5) popwin:special-display-config)
 (push '("*Shell Command Output*" :noselect t :height 0.5) popwin:special-display-config)
+(push '("*eshell*" :height 0.5) popwin:special-display-config)

@@ -340,3 +340,19 @@
 
 (require 'auto-highlight-symbol)
 (global-auto-highlight-symbol-mode t)
+
+(defun copy-filename ()
+  (interactive)
+  (let ((buffer (buffer-file-name (current-buffer))))
+    (kill-new buffer)
+    (message "Copied: %s" buffer)
+    ))
+(global-set-key "\M-C" 'copy-filename)
+
+(defun copy-prove ()
+  (interactive)
+  (let ((buffer (format "carton exec prove %s"(buffer-file-name (current-buffer)))))
+    (kill-new buffer)
+    (message "Copied: %s" buffer)
+    ))
+(global-set-key "\M-c" 'copy-prove)

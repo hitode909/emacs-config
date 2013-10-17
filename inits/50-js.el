@@ -28,12 +28,14 @@
 
 (defun js2 ()
   (interactive)
+  (make-local-variable 'js-indent-level)
   (setq js-indent-level 2)
   (message "Now indent levels is 2")
   )
 
 (defun js4 ()
   (interactive)
+  (make-local-variable 'js-indent-level)
   (setq js-indent-level 4)
   (message "Now indent levels is 4")
   )

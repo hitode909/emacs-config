@@ -1,7 +1,7 @@
 ;; emacs-serverを起動
-(server-start)
-
-(setq server-use-tcp t)
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 ;; C-x kで終了
 (add-hook 'server-switch-hook

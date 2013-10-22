@@ -43,6 +43,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
+ '(git-commit-fill-column 10000)
+ '(git-commit-summary-max-length 10000)
  '(helm-boring-file-regexp-list
    (quote
     ("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "~$" "blib")))

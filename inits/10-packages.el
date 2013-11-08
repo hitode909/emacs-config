@@ -31,6 +31,9 @@
     perl-completion
     anything
     auto-highlight-symbol
+    migemo
+    go-mode
+    markdown-mode
     ))
 
 ;; (package-refresh-contents)

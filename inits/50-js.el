@@ -24,6 +24,8 @@
                 ("Hatean" 0 'font-lock-warning-face)
                 ("hatean" 0 'font-lock-warning-face)
                 ))
+
+             (local-unset-key (kbd "M-."))
              ))
 
 (defun js2 ()

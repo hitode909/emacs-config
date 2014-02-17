@@ -86,6 +86,8 @@
              ;; (perl-completion-mode t)
              ;; (add-to-list 'ac-sources 'ac-source-perl-completion)
 
+             (require 'editortools)
+
              ))
 
 ;; plenv

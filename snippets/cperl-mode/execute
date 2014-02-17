@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: execute(db, sql, bind)
+# key: execute
+# --
+$db->execute(
+    db => '$1',
+    sql => q[
+        $2
+    ],
+    bind => {
+        $3,
+    },
+);

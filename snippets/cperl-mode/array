@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: array(db, class, sql, bind)
+# key: array
+# --
+$db->array(
+    db => '$1',
+    class => '$2',
+    sql => q[
+        $3
+    ],
+    bind => {
+        $4,
+    },
+);

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: single(db, class, sql, bind)
+# key: single
+# --
+$db->single(
+    db => '$1',
+    class => '$2',
+    sql => q[
+        $3
+    ],
+    bind => {
+        $4,
+    },
+);

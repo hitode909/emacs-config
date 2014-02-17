@@ -42,6 +42,18 @@
         (message "not match")
         ))))
 
+(defun popup-editor-perl-use ()
+  (interactive)
+  (let* ((module-name nil))
+    (cond ((use-region-p)
+           (setq module-name (buffer-substring (region-beginning) (region-end)))
+           (keyboard-escape-quit))
+          (t
+           (setq module-name (thing-at-point 'symbol))))
+    (kill-new (concat "use " module-name ";"))
+    (popwin:popup-buffer (current-buffer) :height 0.4)
+    (re-search-backward "^use " nil t)
+    (next-line)))
 
 (add-hook 'cperl-mode-hook
           '(lambda ()

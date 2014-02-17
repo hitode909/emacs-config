@@ -9,7 +9,7 @@
 
   (set-face-attribute 'default nil
 		      :family "Monaco"
-		      :height 120)
+		      :height 130)
   (set-fontset-font "fontset-default"
 		    'japanese-jisx0208
 		    '("Osaka" . "iso10646-1"))
@@ -37,4 +37,17 @@
   (setq mac-pass-option-to-system nil)
 
   (setq ns-use-native-fullscreen nil)
+
+  (defun font-big ()
+    (interactive)
+    (set-face-attribute 'default nil
+                        :family "Monaco"
+                        :height 200)
+    )
+  (defun font-small ()
+    (interactive)
+    (set-face-attribute 'default nil
+                        :family "Monaco"
+                        :height 130)
+    )
   )

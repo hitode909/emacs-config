@@ -34,6 +34,7 @@
     migemo
     go-mode
     markdown-mode
+    helm-perldoc
     ))
 
 ;; (package-refresh-contents)

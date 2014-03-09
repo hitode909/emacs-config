@@ -9,7 +9,7 @@
 
   (set-face-attribute 'default nil
 		      :family "Monaco"
-		      :height 130)
+		      :height 120)
   (set-fontset-font "fontset-default"
 		    'japanese-jisx0208
 		    '("Osaka" . "iso10646-1"))

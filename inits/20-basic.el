@@ -351,7 +351,7 @@
 
 (defun copy-prove ()
   (interactive)
-  (let ((buffer (format "carton exec prove %s"(buffer-file-name (current-buffer)))))
+  (let ((buffer (format "carton exec -- prove -v %s"(buffer-file-name (current-buffer)))))
     (kill-new buffer)
     (message "Copied: %s" buffer)
     ))

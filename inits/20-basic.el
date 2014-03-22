@@ -338,8 +338,8 @@
 (modify-syntax-entry ?_ "w" (standard-syntax-table))
 
 
-;; (require 'auto-highlight-symbol)
-;; (global-auto-highlight-symbol-mode t)
+(require 'auto-highlight-symbol)
+(global-auto-highlight-symbol-mode t)
 
 (defun copy-filename ()
   (interactive)

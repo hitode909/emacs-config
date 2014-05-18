@@ -48,6 +48,6 @@
     (interactive)
     (set-face-attribute 'default nil
                         :family "Monaco"
-                        :height 130)
+                        :height 120)
     )
   )

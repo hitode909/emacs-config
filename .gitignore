@@ -3,3 +3,4 @@ ac-comphist.dat
 places
 server
 url/cookies
+*.elc

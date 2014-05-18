@@ -9,9 +9,9 @@
 ;; face
 (set-face-background 'flymake-errline nil)
 (set-face-foreground 'flymake-errline nil)
-(set-face-inverse-video 'flymake-errline nil)
+(set-face-inverse-video-p 'flymake-errline nil)
 (set-face-underline 'flymake-errline "red")
-(set-face-bold 'flymake-errline t)
+(set-face-bold-p 'flymake-errline t)
 
 ;; flymake のエラーメッセージを popup-tip で表示 - とりあえず暇だったし何となく始めたブログ
 

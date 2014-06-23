@@ -402,3 +402,7 @@
           (append original-display-time-string-forms
                   `(" " ,(jikanwari) " "))))
   (display-time))
+
+(require 'evil-numbers)
+(global-set-key (kbd "C-+") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)

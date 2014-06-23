@@ -35,6 +35,7 @@
     go-mode
     markdown-mode
     helm-perldoc
+    evil-numbers
     ))
 
 ;; (package-refresh-contents)

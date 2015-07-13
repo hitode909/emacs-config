@@ -23,6 +23,7 @@
                 (":" . font-lock-warning-face)
                 ("Hatean" 0 'font-lock-warning-face)
                 ("hatean" 0 'font-lock-warning-face)
+                ("console" . font-lock-warning-face)
                 ))
 
              (local-unset-key (kbd "M-."))

@@ -406,3 +406,7 @@
 (require 'evil-numbers)
 (global-set-key (kbd "C-+") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C--") 'evil-numbers/dec-at-pt)
+
+
+;; コンパイル前に全部保存
+(setq compilation-ask-about-save nil)

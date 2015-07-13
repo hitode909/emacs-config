@@ -1,3 +1,5 @@
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 (when (require 'magit nil t)
   (global-unset-key "\C-xvd")
   (global-set-key [(super s)] 'magit-status)
@@ -11,9 +13,12 @@
 (set-face-inverse-video-p 'diff-added nil)
 (set-face-inverse-video-p 'diff-removed nil)
 
-(set-face-foreground 'magit-header "#586e75")
-(set-face-background 'magit-header "#fdf6e3")
+;; (set-face-foreground 'magit-header "#586e75")
+;; (set-face-background 'magit-header "#fdf6e3")
 
 (add-hook 'magit-mode-hook
           '(lambda ()
              (local-unset-key (kbd "M-p"))))
+
+(setq magit-auto-revert-mode nil)
+

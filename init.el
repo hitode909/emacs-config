@@ -4,7 +4,7 @@
 (setq load-path
       (append
        (list
-        (expand-file-name "~/.emacs.d/")
+        ;; (expand-file-name "~/.emacs.d/")
         (expand-file-name "~/.emacs.d/elisp/")
         (expand-file-name "~/.emacs.d/elisp/el-get/el-get/")
 

@@ -14,6 +14,16 @@
                :description "open github from here"
                :pkgname "shibayu36/emacs-open-github-from-here"
                :branch "development")
+        (:name smartchr
+               :type github
+               :description "smartchr"
+               :pkgname "imakado/emacs-smartchr"
+               :branch "master")
+        (:name auto-programing
+               :type github
+               :description "auto programming"
+               :pkgname "hitode909/emacs-auto-programming"
+               :branch "master")
         (:name highlight-unique-symbol
                :type github
                :description "typo finder"
@@ -55,6 +65,7 @@
     inertial-scroll
     ddskk-head
     highlight-unique-symbol
+    auto-programing
     ))
 
 (el-get 'sync my/el-get-packages)

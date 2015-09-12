@@ -8,7 +8,9 @@
         (expand-file-name "~/.emacs.d/elisp/")
         (expand-file-name "~/.emacs.d/elisp/el-get/el-get/")
 
-        (expand-file-name "~/Dropbox/private-emacs-config/elisp/"))
+        (expand-file-name "~/Dropbox/private-emacs-config/elisp/")
+        (expand-file-name "~/co/emacs-auto-programming/")
+        )
        load-path))
 
 
@@ -63,3 +65,4 @@
 
 
 
+(put 'upcase-region 'disabled nil)

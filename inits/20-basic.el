@@ -64,10 +64,6 @@
 (load "saveplace")
 (setq-default save-place t)
 
-
-;; 補完してbuffer切替
-(iswitchb-mode 1)
-
 ;; 対応する括弧を光らせる
 (show-paren-mode 1)
 (setq show-paren-delay 0)
@@ -224,6 +220,7 @@
 
 (require 'deferred)
 (require 'inertial-scroll)
+(follow-mode nil)
 (setq inertias-global-minor-mode-map 
       (inertias-define-keymap
        '(

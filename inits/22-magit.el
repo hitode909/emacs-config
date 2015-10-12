@@ -6,19 +6,16 @@
   (global-set-key [(super l)] 'magit-log)
   )
 
-(setq magit-save-some-buffers nil)
-
-(setq magit-set-upstream-on-push t)
-
-(set-face-inverse-video-p 'diff-added nil)
-(set-face-inverse-video-p 'diff-removed nil)
-
-;; (set-face-foreground 'magit-header "#586e75")
-;; (set-face-background 'magit-header "#fdf6e3")
 
 (add-hook 'magit-mode-hook
           '(lambda ()
              (local-unset-key (kbd "M-p"))))
 
-(setq magit-auto-revert-mode nil)
+(setq magit-revert-buffers nil)
 
+(setq magit-push-always-verify 'PP)
+
+(setq magit-branch-arguments nil)
+(setq magit-push-arguments '("--set-upstream"))
+
+(setq magit-save-some-buffers nil)

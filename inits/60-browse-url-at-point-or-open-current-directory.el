@@ -1,0 +1,6 @@
+(defun browse-url-at-point-or-open-current-directory ()
+  (interactive)
+  (if (thing-at-point 'url)
+      (browse-url (thing-at-point-url-at-point))
+    (shell-command "open .")
+    ))

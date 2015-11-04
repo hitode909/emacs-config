@@ -9,3 +9,4 @@
 (push '("*Shell Command Output*" :noselect t :height 0.5) popwin:special-display-config)
 (push '("*eshell*" :height 0.5) popwin:special-display-config)
 (push '("*perldoc*" :height 0.5) popwin:special-display-config)
+(push '("magit-diff" :regexp t :noselect t :height 0.5) popwin:special-display-config)

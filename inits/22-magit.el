@@ -18,4 +18,6 @@
 (setq magit-branch-arguments nil)
 (setq magit-push-arguments '("--set-upstream"))
 
+(setq magit-merge-arguments '("--no-ff"))
+
 (setq magit-save-some-buffers nil)

@@ -4,7 +4,7 @@
 (setq flymake-gui-warnings-enabled nil)
 
 ;; 全てのファイルで flymakeを有効化
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+; (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; face
 (set-face-background 'flymake-errline nil)

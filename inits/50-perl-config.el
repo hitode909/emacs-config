@@ -88,6 +88,8 @@
 
              (require 'editortools)
 
+             (setq flycheck-checker 'perl-project-libs)
+
              ))
 
 ;; plenv
@@ -107,3 +109,19 @@
 (push '(".+\\.t$" flymake-perl-init) flymake-allowed-file-name-masks)
 
 (add-hook 'cperl-mode-hook (lambda () (flymake-mode t)))
+
+
+;; flycheck
+
+(flycheck-define-checker perl-project-libs
+  "A perl syntax checker."
+  :command ("perl"
+            "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]"
+            "-wc"
+            source-inplace)
+  :error-patterns ((error line-start
+                          (minimal-match (message))
+                          " at " (file-name) " line " line
+                          (or "." (and ", " (zero-or-more not-newline)))
+                          line-end))
+  :modes (cperl-mode))

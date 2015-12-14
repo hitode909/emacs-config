@@ -31,3 +31,5 @@
 (setq-default flycheck-disabled-checkers
   (append flycheck-disabled-checkers
     '(json-jsonlist)))
+
+(setq flycheck-checker-error-threshold nil)

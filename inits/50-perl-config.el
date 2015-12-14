@@ -125,3 +125,10 @@
                           (or "." (and ", " (zero-or-more not-newline)))
                           line-end))
   :modes (cperl-mode))
+
+(add-hook 'align-load-hook (lambda ()
+                             (add-to-list 'align-rules-list
+                                          '(fatarrow-assignment
+                                            (regexp . "\\( *\\)=>")
+                                            (modes  . '(cperl-mode))))
+                             ))

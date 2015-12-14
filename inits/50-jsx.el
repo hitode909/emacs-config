@@ -1,11 +1,22 @@
-(require 'web-mode)
+;;; package --- Ane
+;;; Commentary:
+;;; setting for jsx
 
-(setq web-mode-code-indent-offset 4)
+(when nil
+  (require 'web-mode)
 
-(setq auto-mode-alist (cons '("/components/.+\\.js$" . web-mode) auto-mode-alist))
+;;; Code:
 
-(add-hook 'web-mode-hook
-          '(lambda ()
-             ;; helmの起動とバッティングしてるので消す
-             (local-unset-key (kbd "C-;"))
-             ))
+  (setq web-mode-code-indent-offset 4)
+
+  (setq auto-mode-alist (cons '("/components/.+\\.js$" . web-mode) auto-mode-alist))
+
+  (add-hook 'web-mode-hook
+            '(lambda ()
+               ;; helmの起動とバッティングしてるので消す
+               (local-unset-key (kbd "C-;"))
+
+               ))
+
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  )

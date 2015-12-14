@@ -21,3 +21,6 @@
 (setq magit-merge-arguments '("--no-ff"))
 
 (setq magit-save-some-buffers nil)
+
+(modify-coding-system-alist 'file "COMMIT_EDITMSG\\'" 'utf-8)
+

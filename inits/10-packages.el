@@ -37,6 +37,9 @@
     helm-perldoc
     evil-numbers
     web-mode
+    flycheck
+    flycheck-pos-tip
+    editorconfig
     ))
 
 ;; (package-refresh-contents)

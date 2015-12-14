@@ -14,11 +14,11 @@
 
 (set-pretty-patterns '((?寿 ("\\<function\\>" js))))
 
-(add-hook 'js-mode-hook
+(add-hook 'js2-mode-hook
           '(lambda ()
 
              (font-lock-add-keywords
-              'js-mode
+              'js2-mode
               '(
                 (":" . font-lock-warning-face)
                 ("Hatean" 0 'font-lock-warning-face)
@@ -26,7 +26,7 @@
                 ("console" . font-lock-warning-face)
                 ))
 
-             (local-unset-key (kbd "M-."))
+             ;; (local-unset-key (kbd "M-."))
              ))
 
 (defun js2 ()
@@ -42,3 +42,7 @@
   (setq js-indent-level 4)
   (message "Now indent levels is 4")
   )
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+(flycheck-add-mode 'javascript-eslint 'js2-jsx-mode)
